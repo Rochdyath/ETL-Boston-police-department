@@ -63,9 +63,12 @@ def bar_chart(numbers, labels):
     # afficher le résultat
     plt.show()
 
+# analyse des salaires de boston par poste
 def analyse_boston_salary(records):
     titles = get_all_title(records)
     mean_salary = list()
+    # récupérer la moyenne salaire par poste dans mean_salary
     for title in titles:
         mean_salary.append(aggregate_department_data(records, title))
+    # afficher une bar chart représentative des
     bar_chart(mean_salary, titles)
